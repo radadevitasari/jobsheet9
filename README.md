@@ -16,3 +16,30 @@ Jawab= Program akan error karena cara akses array salah.Java memakai tanda kurun
 Jawab= Program akan error saat dijalankan (ArrayIndexOutOfBoundsException) karena array hanya punya indeks 0–3. Saat i = 4, program mencoba mengambil bil[4] yang tidak ada.Jadi batas loop harus tetap i < 4.
 
 pertanyaan percobaan 2
+1. Ubah statement pada langkah nomor 5 menjadi seperti berikut ini:
+for (int i=0; i < nilaiAkhir.length; i++) ( System.out.print("Masukkan nilai akhir ke-"+i+": "); nilaiAkhir[i] sc.nextInt();
+}
+Jalankan program. Apakah terjadi perubahan? Mengapa demikian?
+Jawab= Tidak ada perubahan hasil.
+Karena nilaiAkhir.length otomatis menunjukkan jumlah elemen array (yaitu 10).
+Bedanya, ini lebih aman dan fleksibel.Kalau nanti jumlah elemen array diubah, program tetap jalan tanpa perlu ubah angka 10 di dalam perulangan.
+
+2. Apa yang dimaksud dengan kondisi: i < nilaiAkhir.length?
+Jawab= Artinya program akan mengulang selama nilai i masih lebih kecil dari jumlah elemen array.
+Misalnya array berisi 10 data, maka i bernilai dari 0 sampai 9.Dengan begitu, program tidak akan melewati batas array (menghindari error).
+
+3. Ubah statement pada langkah nomor 6 menjadi seperti berikut ini, sehingga program hanya menampilkan nilai Mahasiswa yang lulus saja (yaitu mahasiswa yang memiliki nilai > 70):
+for (int i=0; i < nilaiAkhir.length; i++) {
+if (nilaiAkhir[i] > 70) {
+System.out.println("Mahasiswa ke-"+i+" lulus!");
+}
+}
+Jalankan program dan jelaskan alur program!
+Jawab= Dalam perulangan, setiap nilai dicek:
+Jika lebih dari 70, maka program menampilkan “Mahasiswa ke-i lulus!”
+Jika tidak, program tidak menampilkan apa pun.
+
+4. Modifikasi program agar menampilkan status kelulusan semua mahasiswa berdasarkan nilai, yaitu dengan menampilkan status mana mahasiswa yang lulus dan tidak lulus, seperti ilustrasi output berikut:
+
+pertanyaan percobaan 3
+
